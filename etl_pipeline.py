@@ -10,7 +10,10 @@ filtered_data = data[data['Age'] > 18]  # Filter rows where Age > 18
 
 # Load
 conn = sqlite3.connect("titanic.db")
-filtered_data.to_sql("passengers", conn, if_exists="replace", index=False)
+print(filtered_data.head())  # Check the first few rows of the filtered data
+
+
+filtered_data.to_sql("passengerid", conn, if_exists="replace", index=False)
 conn.close()
 
 print("ETL process completed successfully!")
