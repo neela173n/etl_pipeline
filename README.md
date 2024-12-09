@@ -41,6 +41,8 @@ conn = sqlite3.connect("titanic.db")
 filtered_data.to_sql("passengers", conn, if_exists="replace", index=False)
 conn.close()
 
+the titanic.db file should be downloaded as raw file and opened in the sqlite browser to ensure that the tables are loaded effectively into sqlite
+
 Run the ETL Pipeline:
 
 To run the ETL pipeline, execute the following command:
